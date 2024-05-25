@@ -1,5 +1,6 @@
 ---
 import MainHero from '../components/MainHero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -10,8 +11,11 @@ import Layout from '../layouts/Layout.astro';
 		<div class="flex justify-center items-center gap-4 w-full">
 			<div class="border-black border-t w-full"></div>
 		</div>
-		<SectionTitle >
-			Hola!
+		<SectionTitle title="My Projects">
+			<div class="grid grid-cols-2">
+				<ProjectCard />
+				<ProjectCard />
+			</div>
 		</SectionTitle>
 	</main>
 </Layout>
