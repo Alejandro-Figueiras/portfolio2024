@@ -1,13 +1,20 @@
 ---
+import MainHero from '../components/MainHero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Alejandro Figueiras">
-	<main>
-		
+	<main class="max-w-[1024px] p-4 mx-auto">
+		<MainHero />
+		<div class="flex justify-center items-center gap-4 w-full">
+			<div class="border-black border-t w-full"></div>
+		</div>
+		<SectionTitle >
+			Hola!
+		</SectionTitle>
 	</main>
 </Layout>
 
 <style>
-	
 </style>

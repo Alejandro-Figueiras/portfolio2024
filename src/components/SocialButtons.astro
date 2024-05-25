@@ -1,0 +1,10 @@
+---
+const { img, title, href } = Astro.props
+---
+
+<a href={href}>
+  <button class="border-2 rounded-md transition border-black/70 px-1 text-black/70 hover:border-black/40 hover:text-black/40">
+    {img && <img src={img} />}
+    {title}
+  </button>
+</a>
