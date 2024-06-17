@@ -1,4 +1,13 @@
 ---
-
+const {title, img, descripcion, stack = []} = Astro.props
 ---
-<div></div>
+<div class="grid grid-cols-2 gap-4">
+  <div>
+    <img src={img} alt={title}>
+  </div>
+  <div class="flex flex-col w-full">
+    <h3>{title}</h3>
+    <div>{stack}</div>
+    <div>{descripcion}</div>
+  </div>
+</div>
