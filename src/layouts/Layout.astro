@@ -15,6 +15,10 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- Font Onest -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
@@ -23,7 +27,8 @@ const { title } = Astro.props;
 <style is:global>
 	
 	html {
-		font-family: system-ui, sans-serif;
-		
+		font-family: "Onest", system-ui, sans-serif;
+		font-style: normal;
+		font-optical-sizing: auto;
 	}
 </style>
