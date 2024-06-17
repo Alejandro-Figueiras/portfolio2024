@@ -1,5 +1,7 @@
 ---
-const {title, img, descripcion, stack = []} = Astro.props
+import Tag, { type TagName } from "./Tag.astro"
+
+const {title, img, descripcion, stack = [] as TagName[]} = Astro.props
 ---
 <div class="grid grid-cols-2 gap-16">
   <div class="">
@@ -9,7 +11,7 @@ const {title, img, descripcion, stack = []} = Astro.props
   </div>
   <div class="flex flex-col w-full">
     <h3 class="text-2xl font-bold text-gray-800/80">{title}</h3>
-    <div>{stack}</div>
+    <div class="flex flex-row gap-2">{stack.map((tag: TagName) => <Tag tag={tag}/>)}</div>
     <div>{descripcion}</div>
   </div>
 </div>

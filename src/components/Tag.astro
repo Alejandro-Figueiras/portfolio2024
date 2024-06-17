@@ -1,0 +1,26 @@
+---
+import NextJS from "../icons/NextJS.astro"
+import Tailwind from "../icons/Tailwind.astro"
+
+export type TagName = 'next' | 'tailwind'
+
+const TAGS = {
+  next: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  tailwind: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
+
+const { tag } = Astro.props as { tag: TagName}
+const selectedTag = TAGS[tag]
+---
+<span class={`flex gap-x-2 rounded-full text-xs ${selectedTag.class} py-1 px-2 `}>
+  <selectedTag.icon class="size-4" />
+  {selectedTag.name}
+</span>
